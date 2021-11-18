@@ -24,7 +24,7 @@ const Column: React.FC<DragResult> = ({ columnNum, bgColor }) => {
       {isOver ? (
         <div
           ref={dropRef}
-          className={`flex justify-center items-center h-60 w-full bg-${bgColor}-200 border-2 border-${bgColor}-300 bg-${bgColor}-400`}
+          className={`flex justify-center items-center h-60 w-full bg-${bgColor}-200 bg-${bgColor}-400`}
         >
           <PetCard
             id={`${pets[index].id}`}
@@ -35,7 +35,7 @@ const Column: React.FC<DragResult> = ({ columnNum, bgColor }) => {
       ) : (
         <div
           ref={dropRef}
-          className={`flex justify-center items-center h-60 w-full bg-${bgColor}-200 border-2 border-white`}
+          className={`flex justify-center items-center h-60 w-full bg-${bgColor}-200`}
         >
           <PetCard
             id={`${pets[index].id}`}
@@ -44,6 +44,8 @@ const Column: React.FC<DragResult> = ({ columnNum, bgColor }) => {
           />
         </div>
       )}
+
+      <div className="invisible bg-blue-200 bg-yellow-200 bg-green-200 bg-red-200 bg-blue-400 bg-yellow-400 bg-green-400 bg-red-400"></div>
     </>
   );
 };
